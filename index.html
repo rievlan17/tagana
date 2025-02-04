@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM LAPORAN TAGANA KABUPATEN JEMBER</title>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous"/>
+        <style>
+            body, form {
+                font-family: Arial, sans-serif;
+                background-color: #ffffff;
+                margin: auto;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: rgb(255, 255, 255);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                text-align: center;
+                color: #000000;
+                margin: 20px 0;
+            }
+            img {
+                display: block;
+                margin: 0 auto 20px;
+                width: 50%;
+                height: auto;
+                border: 10px ridge black;
+                border-radius: 10px;            
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+            input[type="text"], input[type="number"], input[type="date"], textarea, select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background: #fff;
+                color: #000;
+            }
+            .input-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #020748;
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+        </style>        
+</head>
+<body>
+<div class="container">
+    <h1><b>FORM LAPORAN TAGANA KABUPATEN JEMBER</b></h1>
+    <img src="Untitled design.jpg" class="img-fluid" alt="logo">
+    
+    <form onsubmit="Kirim(); return false;">
+        <label for="jenis">A. JENIS</label>
+        <select class="form-select" id="jenislaporan" required>
+            <option selected>Pilih Jenis Laporan</option>
+            <option value="Assessment">Assessment</option>
+            <option value="Penanganan">Penanganan</option>
+            <option value="Distribusi">Distribusi</option>
+        </select>    
+
+        <label for="waktu">B. WAKTU</label>
+        <input type="date" id="waktupelaporan" required>
+
+        <label for="alamat">C. LOKASI</label>
+        <input type="text" id="alamatlengkap" placeholder="Dusun/Lingkungan, RT/RW" required>
+        
+        <label for="desa">Desa/Kelurahan</label>
+        <select class="form-select" id="desa" required>
+            <option value="">Pilih Desa</option>
+                <option value="AJUNG">AJUNG</option>
+                <option value="AMBULU">AMBULU</option>
+                <option value="AMPEL">AMPEL</option>
+                <option value="ANDONGREJO">ANDONGREJO</option>
+                <option value="ANDONGSARI">ANDONGSARI</option>
+                <option value="ANTIROGO">ANTIROGO</option>
+                <option value="ARJASA">ARJASA</option>
+                <option value="BADEAN">BADEAN</option>
+                <option value="BAGON">BAGON</option>
+                <option value="BAGOREJO">BAGOREJO</option>
+                <option value="BALET BARU">BALET BARU</option>
+                <option value="BALUNG KIDUL">BALUNG KIDUL</option>
+                <option value="BALUNG KULON">BALUNG KULON</option>
+                <option value="BALUNG LOR">BALUNG LOR</option>
+                <option value="BANGALSARI">BANGALSARI</option>
+                <option value="BANJARSARI">BANJARSARI</option>
+                <option value="BANJARSENGON">BANJARSENGON</option>
+                <option value="BARATAN">BARATAN</option>
+                <option value="BEDADUNG">BEDADUNG</option>
+                <option value="BINTORO">BINTORO</option>
+                <option value="BITING">BITING</option>
+                <option value="CAKRU">CAKRU</option>
+                <option value="CANDIJATI">CANDIJATI</option>
+                <option value="CANGKRING">CANGKRING</option>
+                <option value="CUMEDAK">CUMEDAK</option>
+                <option value="CURAH KALONG">CURAH KALONG</option>
+                <option value="CURAH LELE">CURAH LELE</option>
+                <option value="CURAHMALANG">CURAHMALANG</option>
+                <option value="CURAHNONGKO">CURAHNONGKO</option>
+                <option value="CURAHTAKIR">CURAHTAKIR</option>
+                <option value="DARSONO">DARSONO</option>
+                <option value="DARUNGAN">DARUNGAN</option>
+                <option value="DAWUHAN MANGLI">DAWUHAN MANGLI</option>
+                <option value="DUKUH DEMPOK">DUKUH DEMPOK</option>
+                <option value="DUKUH MENCEK">DUKUH MENCEK</option>
+                <option value="GADINGREJO">GADINGREJO</option>
+                <option value="GAMBIRAN">GAMBIRAN</option>
+                <option value="GAMBIRONO">GAMBIRONO</option>
+                <option value="GARAHAN">GARAHAN</option>
+                <option value="GEBANG">GEBANG</option>
+                <option value="GELANG">GELANG</option>
+                <option value="GLAGAHWERO">GLAGAHWERO</option>
+                <option value="GLUNDENGAN">GLUNDENGAN</option>
+                <option value="GRENDEN">GRENDEN</option>
+                <option value="GUGUT">GUGUT</option>
+                <option value="GUMELAR">GUMELAR</option>
+                <option value="GUMUKMAS">GUMUKMAS</option>
+                <option value="GUMUKSARI">GUMUKSARI</option>
+                <option value="GUNUNG MALANG">GUNUNG MALANG</option>
+                <option value="GUNUNGSARI">GUNUNGSARI</option>
+                <option value="HARJOMULYO">HARJOMULYO</option>
+                <option value="JAMBEARUM">JAMBEARUM</option>
+                <option value="JAMBESARI">JAMBESARI</option>
+                <option value="JAMINTORO">JAMINTORO</option>
+                <option value="JATIAN">JATIAN</option>
+                <option value="JATIMULYO">JATIMULYO</option>
+                <option value="JATIROTO">JATIROTO</option >
+                <option value="JATISARI">JATISARI</option>
+                <option value="JELBUK">JELBUK</option>
+                <option value="JEMBER KIDUL">JEMBER KIDUL</option>
+                <option value="JEMBER LOR">JEMBER LOR</option>
+                <option value="JENGGAWAH">JENGGAWAH</option>
+                <option value="JOMBANG">JOMBANG</option>
+                <option value="JUBUNG">JUBUNG</option>
+                <option value="JUMERTO">JUMERTO</option>
+                <option value="KALIGLAGAH">KALIGLAGAH</option>
+                <option value="KALISAT">KALISAT</option>
+                <option value="KALIWATES">KALIWATES</option>
+                <option value="KALIWINING">KALIWINING</option>
+                <option value="KAMAL">KAMAL</option>
+                <option value="KARANG BAYAT">KARANG BAYAT</option>
+                <option value="KARANG DUREN">KARANG DUREN</option>
+                <option value="KARANG PAITON">KARANG PAITON</option>
+                <option value="KARANG REJO">KARANG REJO</option>
+                <option value="KARANG SEMANDING">KARANG SEMANDING</option>
+                <option value="KARANGANYAR">KARANGANYAR</option>
+                <option value="KARANGHARJO">KARANGHARJO</option>
+                <option value="KARANGKEDAWUNG">KARANGKEDAWUNG</option>
+                <option value="KARANGPRING">KARANGPRING</option>
+                <option value="KARANGREJO">KARANGREJO</option>
+                <option value="KARANGSONO">KARANGSONO</option>
+                <option value="KASIYAN">KASIYAN</option>
+                <option value="KASIYAN TIMUR">KASIYAN TIMUR</option>
+                <option value="KAWANGREJO">KAWANGREJO</option>
+                <option value="KEBON AGUNG">KEBON AGUNG</option>
+                <option value="KEBONSARI">KEBONSARI</option>
+                <option value="KELUNGKUNG">KELUNGKUNG</option>
+                <option value="KEMIRI">KEMIRI</option>
+                <option value="KEMUNING LOR">KEMUNING LOR</option>
+                <option value="KEMUNINGSARI KIDUL">KEMUNINGSARI KIDUL</option>
+                <option value="KEMUNINGSARI LOR">KEMUNINGSARI LOR</option>
+                <option value="KENCONG">KENCONG</option>
+                <option value="KEPANJEN">KEPANJEN</option>
+                <option value="KEPATIHAN">KEPATIHAN</option>
+                <option value="KERANJINGAN">KERANJINGAN</option>
+                <option value="KERTONEGORO">KERTONEGORO</option>
+                <option value="KERTOSARI">KERTOSARI</option>
+                <option value="KESILIR">KESILIR</option>
+                <option value="KETING">KETING</option>
+                <option value="KLATAKAN">KLATAKAN</option>
+                <option value="KLOMPANGAN">KLOMPANGAN</option>
+                <option value="KRAMAT SUKOHARJO">KRAMAT SUKOHARJO</option>
+                <option value="KRATON">KRATON</option>
+                <option value="LAMPEJI">LAMPEJI</option>
+                <option value="LANGKAP">LANGKAP</option>
+                <option value="LEDOKOMBO">LEDOKOMBO</option>
+                <option value="LEMBENGAN">LEMBENGAN</option>
+                <option value="LENGKONG">LENGKONG</option>
+                <option value="LOJEJER">LOJEJER</option>
+                <option value="MANGARAN">MANGARAN</option>
+                <option value="MANGGISAN">MANGGISAN</option>
+                <option value="MANGLI">MANGLI</option>
+                <option value="MAYANG">MAYANG</option>
+                <option value="MAY ANGAN">MAYANGAN</option>
+                <option value="MENAMPU">MENAMPU</option>
+                <option value="MLOKOREJO">MLOKOREJO</option>
+                <option value="MOJOGENI">MOJOGENI</option>
+                <option value="MOJOMULYO">MOJOMULYO</option>
+                <option value="MOJOSARI">MOJOSARI</option>
+                <option value="MRAWAN">MRAWAN</option>
+                <option value="MULYOREJO">MULYOREJO</option>
+                <option value="MUMBULSARI">MUMBULSARI</option>
+                <option value="MUNDUREJO">MUNDUREJO</option>
+                <option value="NGAMPELREJO">NGAMPELREJO</option>
+                <option value="NOGOSARI">NOGOSARI</option>
+                <option value="PACE">PACE</option>
+                <option value="PADOMASAN">PADOMASAN</option>
+                <option value="PAKIS">PAKIS</option>
+                <option value="PAKUSARI">PAKUSARI</option>
+                <option value="PALERAN">PALERAN</option>
+                <option value="PANCAKARYA">PANCAKARYA</option>
+                <option value="PANDUMAN">PANDUMAN</option>
+                <option value="PANTI">PANTI</option>
+                <option value="PASEBAN">PASEBAN</option>
+                <option value="PATEMON">PATEMON</option>
+                <option value="PATEMPURAN">PATEMPURAN</option>
+                <option value="PATRANG">PATRANG</option>
+                <option value="PECORO">PECORO</option>
+                <option value="PETUNG">PETUNG</option>
+                <option value="PLALANGAN">PLALANGAN</option>
+                <option value="PLEREYAN">PLEREYAN</option>
+                <option value="POCANGAN">POCANGAN</option>
+                <option value="PODOK DALEM">PODOK DALEM</option>
+                <option value="PONDOK JOYO">PONDOK JOYO</option>
+                <option value="PONDOKREJO">PONDOKREJO</option>
+                <option value="PONTANG">PONTANG</option>
+                <option value="PRINGGONDANI">PRINGGONDANI</option>
+                <option value="PRINGGOWIRAWAN">PRINGGOWIRAWAN</option>
+                <option value="PUGER KULON">PUGER KULON</option>
+                <option value="PUGER WETAN">PUGER WETAN</option>
+                <option value="PURWOSARI">PURWOSARI</option>
+                <option value="RAMBIGUNDAM">RAMBIGUNDAM</option>
+                <option value="RAMBIPUJI">RAMBIPUJI</option>
+                <option value="RANDU AGUNG">RANDU AGUNG</option>
+                <option value="REJO AGUNG">REJO AGUNG</option>
+                <option value="ROWO INDAH">ROWO INDAH</option>
+                <option value="ROWO TENGAH">ROWO TENGAH</option>
+                <option value="ROWOSARI">ROWOSARI</option>
+                <option value="ROWOTAMTU">ROWOTAMTU</option>
+                <option value="SABRANG">SABRANG</option>
+                <option value="SANENREJO">SANENREJO</option>
+                <option value="SARI MULYO">SARI MULYO</option>
+                <option value="SEBANEN">SEBANEN</option>
+                <option value="SELODAKON">SELODAKON</option>
+                <option value="SEMBORO">SEMBORO</option>
+                <option value="SEMPOLAN">SEMPOLAN</option>
+                <option value="SEMPUSARI">SEMPUSARI</option>
+                <option value="SEPUTIH">SEPUTIH</option>
+                <option value="SERUT">SERUT</option>
+                <option value="SIDODADI">SIDODADI</option>
+                <option value="SIDOMEKAR">SIDOMEKAR</option>
+                <option value="SIDOMUKTI">SIDOMUKTI</option>
+                <option value="SIDOMULYO">SIDOMULYO</option>
+                <option value="SIDOREJO">SIDOREJO</option>
+                <option value="SILO">SILO</option>
+                <option value="SLATENG">SLATENG</option>
+                <option value="SLAWU">SLAWU</option>
+                <option value="SRUNI">SRUNI</option>
+                <option value="SUBO">SUBO</option>
+                <option value="SUCI">SUCI</option>
+                <option value="SUCO">SUCO</option>
+                <option value="SUCO PENGEPOK">SUCO PENGEPOK</option>
+                <option value="SUGER KIDUL">SUGER KIDUL</option>
+                <option value="SUKAMAKMUR">SUKAMAKMUR</option>
+                <option value="SUKO JEMBER">SUKO JEMBER</option>
+                <option value="SUKOGIDRI">SUKOGIDRI</option>
+                <option value="SUKOKERTO">SUKOKERTO</option>
+                <option value="SUKORAMBI">SUKORAMBI</option>
+                <option value="SUKOREJO">SUKOREJO</option>
+                <option value="SUKORENO">SUKORENO</option>
+                <option value="SUKOSARI">SUKOSARI</option>
+                <option value="SUKOWIRYO">SUKOWIRYO</option>
+                <option value="SUKOWONO">SUKOWONO</option>
+                <option value="SUMBER AGUNG">SUMBER AGUNG</option>
+                <option value="SUMBER ANGET">SUMBER ANGET</option>
+                <option value="SUMBER BULUS">SUMBER BULUS</option>
+                <option value="SUMBER JAMBE">SUMBER JAMBE</option>
+                <option value="SUMBER JERUK">SUMBER JERUK</option>
+                <option value="SUMBER KALONG">SUMBER KALONG</option>
+                <option value="SUMBER KEJAYAN">SUMBER KEJAYAN</option>
+                <option value="SUMBER KETEMPAH">SUMBER KETEMPAH</option>
+                <option value="SUMBER LESUNG">SUMBER LESUNG</option>
+                <option value="SUMBER PAKEM">SUMBER PAKEM</option>
+                <option value="SUMBER SALAK">SUMBER SALAK</option>
+                <option value="SUMBER WRINGIN">SUMBER WRINGIN</option>
+                <option value="SUMBERDANTI">SUMBERDANTI</option>
+                <option value="SUMBERJATI">SUMBERJATI</option>
+                <option value="SUMBERPINANG">SUMBERPINANG</option>
+                <option value="SUMBERREJO">SUMBERREJO</option>
+                <option value="SUMBERSARI">SUMBERSARI</option>
+                <option value="SUMBERWARU">SUMBERWARU</option>
+                <option value="SUREN">SUREN</option>
+                <option value="TAMANSARI">TAMANSARI</option>
+                <option value="TANGGUL KULON">TANGGUL KULON</option>
+                <option value="TANGGUL WETAN">TANGGUL WETAN</option>
+                <option value="TANJUNG REJO">TANJUNG REJO</option>
+                <option value="TANJUNGSARI">TANJUNGSARI</option>
+                <option value="TEGAL BESAR">TEGAL BESAR</option>
+                <option value="TEGAL GEDE">TEGAL GEDE</option>
+                <option value="TEGALREJO">TEGALREJO</option>
+                <option value="TEGALSARI">TEGALSARI</option>
+                <option value="TEGALWANGI">TEGALWANGI</option>
+                <option value="TEGALWARU">TEGALWARU</option>
+                <option value="TEMBOKREJO">TEMBOKREJO</option>
+                <option value="TEMPUREJO">TEMPUREJO</option>
+                <option value="TISNOGAMBAR">TISNOGAMBAR</option>
+                <option value="TUGUSARI">TUGUSARI</option>
+                <option value="TUTUL">TUTUL</option>
+                <option value="UMBULREJO">UMBULREJO</option>
+                <option value="UMBULSARI">UMBULSARI</option>
+                <option value="WIROLEGI">WIROLEGI</option>
+                <option value="WIROWONGSO">WIROWONGSO</option>
+                <option value="WONOASRI">WONOASRI</option>
+                <option value="WONOJATI">WONOJATI</option>
+                <option value="WONOREJO">WONOREJO</option>
+                <option value="WONOSARI">WONOSARI</option>
+                <option value="WRINGIN AGUNG">WRINGIN AGUNG</option>
+                <option value="WRINGIN TELU">WRINGIN TELU</option>
+                <option value="YOSORATI">YOSORATI</option>
+        </select>
+
+        <label for="kecamatan">Kecamatan</label>
+        <select class="form-select" id="kecamatan" required>
+            <option value="">Pilih Kecamatan</option>
+            <option value="AJUNG">AJUNG</option>
+            <option value="AMBULU">AMBULU</option>
+            <option value="ARJASA">ARJASA</option>
+            <option value="BALUNG">BALUNG</option>
+            <option value="BANGSALSARI">BANGSALSARI</option>
+            <option value="GUMUKMAS">GUMUKMAS</option>
+            <option value="JELBUK">JELBUK</option>
+            <option value="JENGGAWAH">JENGGAWAH</option>
+            <option value="JOMBANG">JOMBANG</option>
+            <option value="KALISAT">KALISAT</option>
+            <option value="KALIWATES">KALIWATES</option>
+            <option value="KENCONG">KENCONG</option>
+            <option value="LEDOKOMBO">LEDOKOMBO</option>
+            <option value="MAYANG">MAYANG</option>
+            <option value="MUMBULSARI">MUMBULSARI</option>
+            <option value="PAKUSARI">PAKUSARI</option>
+            <option value="PANTI">PANTI</option>
+            <option value="PATRANG">PATRANG</option>
+            <option value="PUGER">PUGER</option>
+            <option value="RAMBIPUJI">RAMBIPUJI</option>
+            <option value="SEMBORO">SEMBORO</option>
+            <option value="SILO">SILO</option>
+            <option value="SUKORAMBI">SUKORAMBI</option>
+            <option value="SUKOWONO">SUKOWONO</option>
+            <option value="SUMBERBARU">SUMBERBARU</option>
+            <option value="SUMBERJAMBE">SUMBERJAMBE</option>
+            <option value="SUMBERSARI">SUMBERSARI</option>
+            <option value="TANGGUL">TANGGUL</option>
+            <option value="TEMPUREJO">TEMPUREJO</option>
+            <option value="UMBULSARI">UMBULSARI</option>
+            <option value="WULUHAN">WULUHAN</option>
+</select>
+
+        <label for="kronologi">D. KRONOLOGI</label>
+        <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian" required></textarea>
+
+        <label>E. DAMPAK</label>
+        <label>SARANA RUMAH</label>
+        <div class="input-container">
+            <input type="number" id="rumahrusakringan" placeholder="Rumah Rusak Ringan">
+            <input type="number" id="rumahrusaksedang" placeholder="Rumah Rusak Sedang">
+            <input type="number" id="rumahrusakberat" placeholder="Rumah Rusak Berat">
+        </div>
+
+        <label>SARANA FASILITAS UMUM</label>
+        <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum" required></textarea>
+
+        <label>KORBAN JIWA</label>
+        <div class="input-container">
+            <input type="number" id="lukaringan" placeholder="Luka Ringan">
+            <input type="number" id="lukaberat" placeholder="Luka Berat">
+            <input type="number" id="meninggal" placeholder="Meninggal">
+            <input type="number" id="hilang" placeholder="Hilang">
+        </div>
+
+        <label for="totaljiwa">TOTAL KK dan JUMLAH JIWA</label>
+        <div class="input-container">
+            <input type="number" id="totaljumlahkk" placeholder="TOTAL JUMLAH KK">
+            <input type="number" id="totaljumlahjiwa" placeholder="TOTAL JUMLAH JIWA">
+        </div>
+
+        <label for="upaya">F. UPAYA YANG DILAKUKAN</label>
+        <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan" required></textarea>
+       
+        <label for="jenisbantuan">Jenis Bantuan</label>
+        <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan"></textarea>
+
+
+        <label for="unsur">G. UNSUR YANG TERLIBAT</label>
+        <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat" required></textarea>
+
+        <label for="personil">H. PERSONIL YANG TERLIBAT</label>
+        <textarea id="personil" placeholder="Sebutkan personil yang terlibat" required></textarea>
+
+        <button class="btn btn-primary" type="submit">Kirim</button>
+    </form>
+</div> 
+
+<script>
+    function Kirim() {
+        const jenis = document.getElementById("jenislaporan").value;
+        const waktu = document.getElementById("waktupelaporan").value;
+        const alamat = document.getElementById("alamatlengkap").value;
+        const desa = document.getElementById("desa").value;
+        const kecamatan = document.getElementById("kecamatan").value;
+        const kronologi = document.getElementById("kronologi").value;
+        const rr = document.getElementById("rumahrusakringan").value;
+        const rs = document.getElementById("rumahrusaksedang").value;
+        const rb = document.getElementById("rumahrusakberat").value;
+        const fasum = document.getElementById("saranafasilitasumum").value;
+        const lr = document.getElementById("lukaringan").value;
+        const lb = document.getElementById("lukaberat").value;
+        const md = document.getElementById("meninggal").value;
+        const hilang = document.getElementById("hilang").value;
+        const kk = document.getElementById("totaljumlahkk").value;
+        const jiwa = document.getElementById("totaljumlahjiwa").value;
+        const upaya = document.getElementById("upaya").value;
+        const jenisbantuan = document.getElementById("jenisbantuan").value;
+        const unsur = document.getElementById("unsur").value;
+        const personil = document.getElementById("personil").value;
+
+        const url = "https://api.whatsapp.com/send?phone=6282229887184&text=*LAPORAN%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
+            "*Kepada%20Yth%20%3B*%0A" +
+            "*1.%20KEPALA%20DINAS%20SOSIAL%20KABUPATEN%20JEMBER*%0A" +
+            "*2.%20KABID.%20PENANGANAN%20BENCANA%20DINAS%20SOSIAL%20KABUPATEN%20JEMBER*%0A" +
+            "*3.%20PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
+            "*A.%20JENIS*%0A" + jenis + "%0A%0A" +
+            "*B.%20WAKTU*%0A" + waktu + "%0A%0A" +
+            "*C.%20LOKASI*%0A" + alamat + "%0A" + desa + "%0A" + kecamatan + "%0A%0A" +
+            "*D.%20KRONOLOGI*%0A" + kronologi + "%0A%0A" +
+            "*E.%20DAMPAK*%0A1.%20Fasilitas%20Umum%20%3A%20" + fasum + "%0A" +
+            "2.%20Rumah%0ARusak%20Ringan%20%3A%20" + rr + "%0A" +
+            "Rusak%20Sedang%20%3A%20" + rs + "%0A" +
+            "Rusak%20Berat%20%3A%20" + rb + "%0A" +
+            "3.%20Korban%20Jiwa%0ALuka%20Ringan%20%3A%20" + lr + "%0A" +
+            "Luka%20Berat%20%3A%20" + lb + "%0A" +
+            "Meninggal%20%3A%20" + md + "%0A" +
+            "Hilang%20%3A%20" + hilang + "%0A" +
+            "4.%20Jumlah%20KK%20%3A%20" + kk + "%0A" +
+            "5.%20Jumlah%20Total%20Jiwa%20%3A%20" + jiwa + "%0A%0A" +
+            "*F.%20UPAYA%20YANG%20DILAKUKAN*%0A" + upaya + "%0A" + 
+            "Jenis%20Bantuan%20"+ jenisbantuan +"%0A%0A" +
+            "*G.%20UNSUR%20YANG%20TERLIBAT*%0A" + unsur + "%0A%0A" +
+            "*H.%20PERSONIL*%0A" + personil + "%0A%0A"+
+            "*I.%20DOKUMENTASI*%0ATerlampir%0A%0A*J.%20PENUTUP*%0ADemikian%20laporan%20kami.%0A%0A*PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0AJL.%20Lumba-lumba%20No.01%2C%20Sempusari%2C%20Kaliwates%2C%20Jember%0A%E2%98%8E%C2%A00822-2988-7184";
+
+
+        window.open(url, '_blank');
+    }
+</script>
+</body>
+</html>
