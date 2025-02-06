@@ -23,6 +23,7 @@
                 border-radius: 5px;
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
             }
+              
             h1 {
                 text-align: center;
                 color: #000000;
@@ -364,11 +365,11 @@
             <option value="TEMPUREJO">TEMPUREJO</option>
             <option value="UMBULSARI">UMBULSARI</option>
             <option value="WULUHAN">WULUHAN</option>
-</select>
+        </select>
 
         <label for="kronologi">D. KRONOLOGI</label>
         <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian" required></textarea>
-
+        
         <label>E. DAMPAK</label>
         <label>SARANA RUMAH</label>
         <div class="input-container">
@@ -396,16 +397,15 @@
 
         <label for="upaya">F. UPAYA YANG DILAKUKAN</label>
         <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan" required></textarea>
-       
+
         <label for="jenisbantuan">Jenis Bantuan</label>
         <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan"></textarea>
 
-
         <label for="unsur">G. UNSUR YANG TERLIBAT</label>
-        <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat" required></textarea>
+            <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat. Contoh (Tagana, Sahabat Tagana, dst)" required></textarea>
 
         <label for="personil">H. PERSONIL YANG TERLIBAT</label>
-        <textarea id="personil" placeholder="Sebutkan personil yang terlibat" required></textarea>
+        <textarea id="personil" placeholder="Sebutkan personil yang terlibat. Contoh pengisian (Nama, nama, nama)" required></textarea>
 
         <button class="btn btn-primary" type="submit">Kirim</button>
     </form>
@@ -441,20 +441,22 @@
             "*3.%20PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
             "*A.%20JENIS*%0A" + jenis + "%0A%0A" +
             "*B.%20WAKTU*%0A" + waktu + "%0A%0A" +
-            "*C.%20LOKASI*%0A" + alamat + "%0A" + desa + "%0A" + kecamatan + "%0A%0A" +
+            "*C.%20LOKASI*%0A" + alamat + "%0A" +
+            "Desa/Kelurahan%20" + desa + "%0A" +
+            "Kecamatan%20" + kecamatan + "%0A%0A" +
             "*D.%20KRONOLOGI*%0A" + kronologi + "%0A%0A" +
-            "*E.%20DAMPAK*%0A1.%20Fasilitas%20Umum%20%3A%20" + fasum + "%0A" +
-            "2.%20Rumah%0ARusak%20Ringan%20%3A%20" + rr + "%0A" +
-            "Rusak%20Sedang%20%3A%20" + rs + "%0A" +
-            "Rusak%20Berat%20%3A%20" + rb + "%0A" +
-            "3.%20Korban%20Jiwa%0ALuka%20Ringan%20%3A%20" + lr + "%0A" +
-            "Luka%20Berat%20%3A%20" + lb + "%0A" +
-            "Meninggal%20%3A%20" + md + "%0A" +
-            "Hilang%20%3A%20" + hilang + "%0A" +
-            "4.%20Jumlah%20KK%20%3A%20" + kk + "%0A" +
-            "5.%20Jumlah%20Total%20Jiwa%20%3A%20" + jiwa + "%0A%0A" +
+            "*E.%20DAMPAK*%0AFasilitas%20Umum%0A" + fasum + "%0A%0A" +
+            "Rumah%0A1.%20Rusak%20Ringan%20%3A%20" + rr + "%0A" +
+            "2.%20Rusak%20Sedang%20%3A%20" + rs + "%0A" +
+            "3.%20Rusak%20Berat%20%3A%20" + rb + "%0A%0A" +
+            "Korban%20Jiwa%0A1.%20Luka%20Ringan%20%3A%20" + lr + "%0A" +
+            "2%20Luka%20Berat%20%3A%20" + lb + "%0A" +
+            "3.%20Meninggal%20%3A%20" + md + "%0A" +
+            "4.%20Hilang%20%3A%20" + hilang + "%0A%0A" +
+            "Jumlah%20KK%20%3A%20" + kk + "%0A" +
+            "Jumlah%20Total%20Jiwa%20%3A%20" + jiwa + "%0A%0A" +
             "*F.%20UPAYA%20YANG%20DILAKUKAN*%0A" + upaya + "%0A" + 
-            "Jenis%20Bantuan%20"+ jenisbantuan +"%0A%0A" +
+            "Jenis%20Bantuan%0A"+ jenisbantuan +"%0A%0A" +
             "*G.%20UNSUR%20YANG%20TERLIBAT*%0A" + unsur + "%0A%0A" +
             "*H.%20PERSONIL*%0A" + personil + "%0A%0A"+
             "*I.%20DOKUMENTASI*%0ATerlampir%0A%0A*J.%20PENUTUP*%0ADemikian%20laporan%20kami.%0A%0A*PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0AJL.%20Lumba-lumba%20No.01%2C%20Sempusari%2C%20Kaliwates%2C%20Jember%0A%E2%98%8E%C2%A00822-2988-7184";
