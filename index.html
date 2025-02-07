@@ -82,10 +82,12 @@
             <option value="Distribusi">Distribusi</option>
         </select>    
 
-        <label for="waktu">B. WAKTU</label>
-        <input type="date" id="waktupelaporan" required>
-
-        <label for="alamat">C. LOKASI</label>
+        <label for="alamat">B. WAKTU & LOKASI</label>
+        <Label>Waktu Kejadian</Label>
+        <input type="text" id="waktu" placeholder="Hari, Tanggal" required>
+        <Label>Waktu Pelaporan</Label>
+        <input type="text" id="waktukejadian" placeholder="Hari, Tanggal" required>
+        <label >Alamat Lengkap</label>
         <input type="text" id="alamatlengkap" placeholder="Dusun/Lingkungan, RT/RW" required>
         
         <label for="desa">Desa/Kelurahan</label>
@@ -368,16 +370,19 @@
             <option value="WULUHAN">WULUHAN</option>
         </select>
 
-        <label for="kronologi">D. KRONOLOGI</label>
+        <label for="kronologi">C. KRONOLOGI</label>
         <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian" rows="3" ></textarea>
         
-        <label>E. DAMPAK</label>
+        <label>D. DAMPAK</label>
         <label>Sarana Rumah</label>
         <div class="input-container">
             <input type="number" id="rumahrusakringan" placeholder="Rumah Rusak Ringan">
             <input type="number" id="rumahrusaksedang" placeholder="Rumah Rusak Sedang">
             <input type="number" id="rumahrusakberat" placeholder="Rumah Rusak Berat">
         </div>
+        <label>Ekonomi</label>
+        <textarea id="ekonomi" placeholder="Jelaskan dampak ekonomi" rows="1" ></textarea>
+
 
         <label>Sarana Fasilitas Umum</label>
         <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum" rows="1" ></textarea>
@@ -396,16 +401,16 @@
             <input type="number" id="totaljumlahjiwa" placeholder="Total Jumlah Jiwa">
         </div>
 
-        <label for="upaya">F. UPAYA YANG DILAKUKAN</label>
+        <label for="upaya">E. UPAYA YANG DILAKUKAN</label>
         <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan" rows="1" ></textarea>
 
         <label for="jenisbantuan">Jenis Bantuan</label>
         <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan. Contoh (Paket Sembako, Kasur Lipat, dll)" rows="1"></textarea>
 
-        <label for="unsur">G. UNSUR YANG TERLIBAT</label>
+        <label for="unsur">F. UNSUR YANG TERLIBAT</label>
         <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat. Contoh (Tagana, Sahabat Tagana, dst)" rows="1" required></textarea>
 
-        <label for="personil">H. PERSONIL YANG TERLIBAT</label>
+        <label for="personil">G. PERSONIL YANG TERLIBAT</label>
         <textarea id="personil" placeholder="Sebutkan personil yang terlibat. Contoh pengisian (Nama, nama, nama)" rows="1" required></textarea>
 
         <button class="btn btn-primary" type="submit">Kirim</button>
@@ -444,13 +449,17 @@
             "*1.%20KEPALA%20DINAS%20SOSIAL%20KABUPATEN%20JEMBER*%0A" +
             "*2.%20KABID.%20PENANGANAN%20BENCANA%20DINAS%20SOSIAL%20KABUPATEN%20JEMBER*%0A" +
             "*3.%20PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
-            "*A.%20JENIS*%0A" + jenis + "%0A%0A" +
-            "*B.%20WAKTU*%0A" + waktu + "%0A%0A" +
+            "*A.%20JENIS%20LAPORAN*%0A" + jenis + "%0A%0A" +
+            "*B.%20WAKTU*%0A" +
+            "Waktu%20Kejadian%0A"+ waktukejadian +"%0A"
+            "Waktu%20Pelaporan%0A"+ waktu +"%0A" +
             "*C.%20LOKASI*%0A" + alamat + "%0A" +
             "Desa/Kelurahan%20" + desa + "%0A" +
             "Kecamatan%20" + kecamatan + "%0A%0A" +
             "*D.%20KRONOLOGI*%0A" + kronologi + "%0A%0A" +
-            "*E.%20DAMPAK*%0AFasilitas%20Umum%0A" + fasum + "%0A%0A" +
+            "*E.%20DAMPAK*%0A" +
+            "Ekonomi%0A" + ekonomi +"%0A"
+            "Fasilitas%20Umum%0A" + fasum + "%0A%0A" +
             "Rumah%0A1.%20Rusak%20Ringan%20%3A%20" + rr + "%0A" +
             "2.%20Rusak%20Sedang%20%3A%20" + rs + "%0A" +
             "3.%20Rusak%20Berat%20%3A%20" + rb + "%0A%0A" +
@@ -459,7 +468,7 @@
             "3.%20Meninggal%20%3A%20" + md + "%0A" +
             "4.%20Hilang%20%3A%20" + hilang + "%0A%0A" +
             "Jumlah%20KK%20%3A%20" + kk + "%0A" +
-            "Jumlah%20Total%20Jiwa%20%3A%20" + jiwa + "%0A%0A" +
+            "Jumlah%20Jiwa%20%3A%20" + jiwa + "%0A%0A" +
             "*F.%20UPAYA%20YANG%20DILAKUKAN*%0A" + upaya + "%0A" + 
             "Jenis%20Bantuan%0A"+ jenisbantuan +"%0A%0A" +
             "*G.%20UNSUR%20YANG%20TERLIBAT*%0A" + unsur + "%0A%0A" +
