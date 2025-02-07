@@ -28,6 +28,7 @@
                 text-align: center;
                 color: #000000;
                 margin: 0 auto 20px;
+                
             }
             img {
                 display: block;
@@ -73,7 +74,7 @@
     <img src="Untitled design.jpg" class="img-fluid" alt="logo">
     
     <form onsubmit="Kirim(); return false;">
-        <label for="jenis">A. JENIS KEGIATAN</label>
+        <label for="jenis"><b>A. JENIS KEGIATAN</b></label>
         <select class="form-select" id="jenislaporan" required>
             <option selected>Pilih Jenis Laporan</option>
             <option value="Assessment">Assessment</option>
@@ -81,7 +82,7 @@
             <option value="Distribusi">Distribusi Bantuan</option>
         </select>    
 
-        <label for="alamat">B. WAKTU & LOKASI</label>
+        <label for="alamat"><b>B. WAKTU & LOKASI</b></label>
         <Label>Waktu</Label>
         <input type="text" id="waktu" placeholder="Hari, Tanggal" required>
         <label >Alamat Lengkap</label>
@@ -370,7 +371,7 @@
         <label for="kronologi">C. KRONOLOGI</label>
         <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian" rows="3" ></textarea>
         
-        <label>D. DAMPAK</label>
+        <label><b>D. DAMPAK</b></label>
         <label>Sarana Rumah</label>
         <div class="input-container">
             <input type="number" id="rumahrusakringan" placeholder="Rumah Rusak Ringan">
@@ -381,7 +382,7 @@
         <textarea id="ekonomi" placeholder="Jelaskan dampak ekonomi" rows="1" ></textarea>
 
 
-        <label>Sarana Fasilitas Umum</label>
+        <label>Fasilitas Umum</label>
         <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum" rows="1" ></textarea>
 
         <label>Korban Jiwa</label>
@@ -392,22 +393,22 @@
             <input type="number" id="hilang" placeholder="Hilang">
         </div>
 
-        <label for="totaljiwa">Total KK dan Jumlah Jiwa</label>
+        <label for="totaljiwa">Jumlah KK & Jiwa</label>
         <div class="input-container">
-            <input type="number" id="totaljumlahkk" placeholder="Total Jumlah KK">
+            <input type="number" id="totaljumlahkk" placeholder="Jumlah KK">
             <input type="number" id="totaljumlahjiwa" placeholder="Jumlah Jiwa">
         </div>
 
-        <label for="upaya">E. UPAYA YANG DILAKUKAN</label>
+        <label for="upaya"><b>E. UPAYA YANG DILAKUKAN</b></label>
         <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan" rows="1" ></textarea>
 
         <label for="jenisbantuan">Jenis Bantuan</label>
         <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan. Contoh (Paket Sembako, Kasur Lipat, dll)" rows="1"></textarea>
 
-        <label for="unsur">F. UNSUR YANG TERLIBAT</label>
+        <label for="unsur"><b>F. UNSUR YANG TERLIBAT</b></label>
         <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat. Contoh (Tagana, Sahabat Tagana, dst)" rows="1" required></textarea>
 
-        <label for="personil">G. PERSONIL YANG TERLIBAT</label>
+        <label for="personil"><b>G. PERSONIL YANG TERLIBAT</b></label>
         <textarea id="personil" placeholder="Sebutkan personil yang terlibat. Contoh pengisian (Nama, nama, nama)" rows="1" required></textarea>
 
         <button class="btn btn-primary" type="submit">Kirim</button>
