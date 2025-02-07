@@ -369,7 +369,7 @@
         </select>
 
         <label for="kronologi">D. KRONOLOGI</label>
-        <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian"></textarea>
+        <textarea id="kronologi" placeholder="Jelaskan secara rinci urutan kejadian" rows="3" ></textarea>
         
         <label>E. DAMPAK</label>
         <label>Sarana Rumah</label>
@@ -380,7 +380,7 @@
         </div>
 
         <label>Sarana Fasilitas Umum</label>
-        <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum"></textarea>
+        <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum" rows="1" ></textarea>
 
         <label>Korban Jiwa</label>
         <div class="input-container">
@@ -397,22 +397,26 @@
         </div>
 
         <label for="upaya">F. UPAYA YANG DILAKUKAN</label>
-        <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan"></textarea>
+        <textarea id="upaya" placeholder="Jelaskan upaya yang dilakukan" rows="1" ></textarea>
 
         <label for="jenisbantuan">Jenis Bantuan</label>
-        <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan"></textarea>
+        <textarea id="jenisbantuan" placeholder="Isikan jenis bantuan yang di berikan. Contoh (Paket Sembako, Kasur Lipat, dll)" rows="1"></textarea>
 
         <label for="unsur">G. UNSUR YANG TERLIBAT</label>
-            <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat. Contoh (Tagana, Sahabat Tagana, dst)" required></textarea>
+        <textarea id="unsur" placeholder="Sebutkan unsur - unsur yang terlibat. Contoh (Tagana, Sahabat Tagana, dst)" rows="1" required></textarea>
 
         <label for="personil">H. PERSONIL YANG TERLIBAT</label>
-        <textarea id="personil" placeholder="Sebutkan personil yang terlibat. Contoh pengisian (Nama, nama, nama)" required></textarea>
+        <textarea id="personil" placeholder="Sebutkan personil yang terlibat. Contoh pengisian (Nama, nama, nama)" rows="1" required></textarea>
 
         <button class="btn btn-primary" type="submit">Kirim</button>
     </form>
 </div> 
 
 <script>
+    function formatList(text) {
+    return text.split(/\n|,/).map((item, index) => (index + 1) + ". " + item.trim()).join("%0A");
+    }
+
     function Kirim() {
         const jenis = document.getElementById("jenislaporan").value;
         const waktu = document.getElementById("waktupelaporan").value;
@@ -431,9 +435,9 @@
         const kk = document.getElementById("totaljumlahkk").value;
         const jiwa = document.getElementById("totaljumlahjiwa").value;
         const upaya = document.getElementById("upaya").value;
-        const jenisbantuan = document.getElementById("jenisbantuan").value;
-        const unsur = document.getElementById("unsur").value;
-        const personil = document.getElementById("personil").value;
+        const jenisbantuan = formatList(document.getElementById("jenisbantuan").value);
+        const unsur = formatList(document.getElementById("unsur").value);
+        const personil = formatList(document.getElementById("personil").value);
 
         const url = "https://api.whatsapp.com/send?phone=6282229887184&text=*LAPORAN%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
             "*Kepada%20Yth%20%3B*%0A" +
