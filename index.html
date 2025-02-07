@@ -74,19 +74,17 @@
     <img src="Untitled design.jpg" class="img-fluid" alt="logo">
     
     <form onsubmit="Kirim(); return false;">
-        <label for="jenis">A. JENIS</label>
+        <label for="jenis">A. JENIS KEGIATAN</label>
         <select class="form-select" id="jenislaporan" required>
             <option selected>Pilih Jenis Laporan</option>
             <option value="Assessment">Assessment</option>
-            <option value="Penanganan">Penanganan</option>
-            <option value="Distribusi">Distribusi</option>
+            <option value="Penanganan">Penanganan/ Tanggap Darurat</option>
+            <option value="Distribusi">Distribusi Bantuan</option>
         </select>    
 
         <label for="alamat">B. WAKTU & LOKASI</label>
-        <Label>Waktu Kejadian</Label>
+        <Label>Waktu</Label>
         <input type="text" id="waktu" placeholder="Hari, Tanggal" required>
-        <Label>Waktu Pelaporan</Label>
-        <input type="text" id="waktukejadian" placeholder="Hari, Tanggal" required>
         <label >Alamat Lengkap</label>
         <input type="text" id="alamatlengkap" placeholder="Dusun/Lingkungan, RT/RW" required>
         
@@ -398,7 +396,7 @@
         <label for="totaljiwa">Total KK dan Jumlah Jiwa</label>
         <div class="input-container">
             <input type="number" id="totaljumlahkk" placeholder="Total Jumlah KK">
-            <input type="number" id="totaljumlahjiwa" placeholder="Total Jumlah Jiwa">
+            <input type="number" id="totaljumlahjiwa" placeholder="Jumlah Jiwa">
         </div>
 
         <label for="upaya">E. UPAYA YANG DILAKUKAN</label>
@@ -424,11 +422,12 @@
 
     function Kirim() {
         const jenis = document.getElementById("jenislaporan").value;
-        const waktu = document.getElementById("waktupelaporan").value;
+        const waktu = document.getElementById("waktu").value;
         const alamat = document.getElementById("alamatlengkap").value;
         const desa = document.getElementById("desa").value;
         const kecamatan = document.getElementById("kecamatan").value;
         const kronologi = document.getElementById("kronologi").value;
+        const ekonomi = document.getElementById("ekonomi").value;
         const rr = document.getElementById("rumahrusakringan").value;
         const rs = document.getElementById("rumahrusaksedang").value;
         const rb = document.getElementById("rumahrusakberat").value;
@@ -451,7 +450,6 @@
             "*3.%20PUSDALOPS%20TAGANA%20KABUPATEN%20JEMBER*%0A%0A" +
             "*A.%20JENIS%20LAPORAN*%0A" + jenis + "%0A%0A" +
             "*B.%20WAKTU*%0A" +
-            "Waktu%20Kejadian%0A"+ waktukejadian +"%0A"
             "Waktu%20Pelaporan%0A"+ waktu +"%0A" +
             "*C.%20LOKASI*%0A" + alamat + "%0A" +
             "Desa/Kelurahan%20" + desa + "%0A" +
