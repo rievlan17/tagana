@@ -6,20 +6,20 @@ header {
 }
 
 body, form {
-font-family: Arial, sans-serif;
-background-color: #ffffff;
-margin: auto;
-border: 4px #000;
-border-radius: 6px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: auto;
+    border: 4px #000;
+    border-radius: 6px;
 }
 
 .container {
-max-width: 800px;
-margin: 0 auto;
-background: rgb(235, 235, 235);
-padding: 10px;
-border-radius: 5px;
-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgb(252, 252, 252);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
               
 h1 {
@@ -45,10 +45,9 @@ margin: 10px 0 5px;
 input[type="text"], input[type="number"], input[type="date"], textarea, select {
 width: 100%;
 padding: 10px;
-margin-bottom: 15px;
 border: 1px solid #ccc;
 border-radius: 4px;
-background: #fff;
+background: #ffffff;
 color: #000;
 }
 
