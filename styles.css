@@ -1,13 +1,22 @@
+header {
+    background-color: #333; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center;
+}
+
 body, form {
 font-family: Arial, sans-serif;
 background-color: #ffffff;
 margin: auto;
+border: 4px #000;
+border-radius: 6px;
 }
 
 .container {
 max-width: 800px;
 margin: 0 auto;
-background: rgb(255, 255, 255);
+background: rgb(235, 235, 235);
 padding: 10px;
 border-radius: 5px;
 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -59,3 +68,15 @@ border-radius: 4px;
 cursor: pointer;
 margin-top: 20px;
 }
+
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+

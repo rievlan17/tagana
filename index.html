@@ -9,9 +9,16 @@
                 
 </head>
 <body>
+
+<header>
+    <nav>
+        <img src="Untitled design.jpg" class="img-fluid" alt="logo">
+    </nav>
+</header>
+
+<main>
  <div class="container">
     <h1><b>FORM LAPORAN TAGANA KABUPATEN JEMBER</b></h1>
-    <img src="Untitled design.jpg" class="img-fluid" alt="logo">
     
     <form onsubmit="Kirim(); return false;">
         <label for="jenis"><b>A. JENIS LAPORAN</b></label>
@@ -319,11 +326,11 @@
             <input type="number" id="rumahrusakberat" placeholder="Rumah Rusak Berat">
         </div>
         <label>Ekonomi</label>
-        <textarea id="ekonomi" placeholder="Jelaskan dampak ekonomi (isikan - jika tidak ada dampak)" rows="1" ></textarea>
+        <textarea id="ekonomi" placeholder="Contoh hilang/ rusaknya inventaris usaha seperti gerobak jualan, bangunan toko yang di miliki rusak, dsb. (isikan - jika tidak ada dampak)" rows="2" ></textarea>
 
 
         <label>Fasilitas Umum</label>
-        <textarea id="saranafasilitasumum" placeholder="Jelaskan kondisi fasilitas umum (isikan - jika tidak ada dampak)" rows="1" ></textarea>
+        <textarea id="saranafasilitasumum" placeholder="Kondisi fasum seperti tempat ibadah, sekolah, jembatan, jalan raya, dsb. (isikan - jika tidak ada dampak)" rows="2" ></textarea>
 
         <label>Korban Jiwa</label>
         <div class="input-container">
@@ -354,6 +361,36 @@
         <button class="btn btn-primary" type="submit">Kirim</button>
     </form>
 </div>
+</main>
+
+<footer>
+    <div class="container-fluid px-5 py-4 rounded" style="background-color: #212121;">
+        <div class="row">
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex"></div>
+            <div class="contact-box__info">
+                <p class="contact-box__info--title mb-0">Telp</p>
+                <p class="contact-box__info--subtitle mb-0">SLRT Dinas Sosial +62 877 1061 3756</p>
+                <p class="contact-box__info--subtitle">Keposkoan Tagana +62 822 2988 7184</p>
+            </div>
+                <div class="contact-box__info">
+                    <p class="contact-box__info--title mb-0">Email</p>
+                    <p class="contact-box__info--subtitle mb-0">dinas.sosial@jemberkab.go.id</p>
+                    <p class="contact-box__info--subtitle">taganajemberkeren@gmail.com</p>
+
+                </div>
+                <div class="contact-box__info">
+                    <p class="contact-box__info--title mb-0">Alamat Kantor</p>
+                    <p class="contact-box__info--subtitle"> Jl. Tawes No.306, Kaliwates, Kec. Kaliwates, Kabupaten Jember, Jawa Timur 68131</p>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom__copyright text-uppercase mt-2 mb-2">
+        © 2025 - Tagana Dinas Sosial Kabupaten Jember
+    </div>
+
+</footer>
+
 <script src="script.js"></script> 
 </body>
 </html>
