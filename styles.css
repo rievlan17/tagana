@@ -25,12 +25,12 @@ body, form {
 h1 {
 text-align: center;
 color: #000000;
-margin: 0 auto 20px;
+margin: 10px auto 10px;
 }
 
 img {
 display: block;
-margin: 0 auto 20px;
+margin: 10px auto 10px;
 width: 70%;
 height: auto;
 border: 4px ridge black;
